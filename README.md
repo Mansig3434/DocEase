@@ -1,2 +1,2 @@
 # DocEase
-DocEase is the Doc utility platform that provide all necessary tools for managing and manipulating document files...
+Its a Django project so before using code go through commands and use them accordingly
