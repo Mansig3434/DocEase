@@ -1,0 +1,19 @@
+Use following commands in your project accordingly in terminal
+
+# Create Django Project
+-> pip install Django 
+-> django-admin startproject doc_utility [Project Name]
+-> python manage.py startapp utilities   [Project App Name]
+
+# Use migration commands 
+-> python manage.py makemigrations
+-> python manage.py migrate
+-> python manage.py showmigrations
+
+# Install libraries before using them
+-> pip install python-docx 
+-> pip install python-pptx
+-> pip install reportlab
+
+# Run server
+-> python manage.py runserver 
