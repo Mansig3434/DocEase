@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  
+    <style>
+.home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+p{
+   text-align: center;
+   font-size: 1em;
+   margin-bottom: 10px;
+}
+button {
+    padding: 10px 20px ;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+button:hover {
+   background-color: #0056b3;
+
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-left:25px;
+        }
+
+        .header nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            padding: 0px 4%;
+        }
+
+        .header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .header nav a:hover {
+            color: #f1f9ff;
+            transform: scale(1.1);
+        }
+         .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 450px;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        .dropdown-menu .section {
+            flex: 1;
+            margin-right: 10px;
+        }
+        .dropdown-menu .section a{
+           color:black
+        }
+
+        .dropdown-menu h4 {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+            color: #004aad;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 5px;
+            color: #333;
+            text-decoration: none;
+            font-size: 0.85em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+            .dropdown-menu a:hover {
+            background-color: black;
+            color: #004aad;
+        }
+
+        .header .cta {
+            background-color: #28a745;
+            color: white;
+            padding: 4px 8px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .header .cta:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+        }
+
+        .mega-dropdown {
+            position: relative;
+            width: 100%;
+        }
+
+        .mega-dropdown:hover .mega-dropdown-menu {
+            display: flex;
+        }
+
+        .mega-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 550px;
+            background-color: #f5f5f5;
+            color: #222;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            justify-content: space-between;
+            z-index: 100;
+        }
+
+        .mega-dropdown-menu .section {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .mega-dropdown-menu .section a {
+           color:black;
+        }
+
+        .mega-dropdown-menu h4 {
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #004aad;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            width:100%;
+        }
+
+        .mega-dropdown-menu a {
+            display: block;
+            padding: 5px 0;
+            color: black;
+            text-decoration: none;
+            font-size: 0.85em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .mega-dropdown-menu a:hover {
+            background-color: black;
+            color: #004aad;
+        }
+
+.dropdown-menu h4,
+.mega-dropdown-menu h4 {
+    white-space: nowrap;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: #004aad;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+   .download-link {
+       text-align: center;
+       margin-top: 20px;
+}
+.download-link a {
+       text-decoration: none;
+       color: white;
+       background-color: #007BFF;
+       padding: 10px 20px;
+       border-radius: 5px;
+}
+ html{
+        overflow-x: hidden;
+    width: 100%;
+    }
+.download-link a:hover {
+       background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">DocEase</div>
+    <nav>
+        <a href="/">Home</a>
+         <a href="/merge-docs">Merge</a>
+        <a href="/split-docs">Split</a>
+         <div class="dropdown">
+        <a href="#">Convert</a>
+         <div class="dropdown-menu">
+             <div class="section">
+                <h4>Convert to DOC</h4>
+                <a href="/">PDF to DOC</a>
+                <a href="/">PPTX to DOC</a>
+                <a href="/">EXCEL to DOC</a>
+             </div>
+             <div class="section">
+                <h4>Convert from DOC</h4>
+                <a href="{% url 'doc_to_pdf' %}">DOC to PDF</a>
+                <a href="{% url 'convert_docx_to_pptx' %}">DOC to PPTX</a>
+                <a href="">DOC to EXCEL</a>
+             </div>
+            </div>
+         </div>
+        <div class="mega-dropdown">
+        <a href="/features">Features</a>
+            <div class="mega-dropdown-menu">
+                <div class="section">
+                    <h4>Organize DOC</h4>
+                    <a href="/merge-docs">Merge DOC</a>
+                    <a href="/split-docs">Split DOC</a>
+                    <br>
+
+                     <h4>Convert to DOC</h4>
+                    <a href="#">PDF to DOC</a>
+                    <a href="#">PPTX to DOC</a>
+                    <a href="#">Excel to DOC</a>
+
+                </div>
+                 <div class="section">
+                     <h4>Edit DOC</h4>
+                     <a href="{% url 'watermark_doc' %}">Add Watermark</a>
+
+                </div>
+                <div class="section">
+                    <h4>Convert from DOC</h4>
+                    <a href="{% url 'doc_to_pdf' %}">DOC to PDF</a>
+                    <a href="{% url 'convert_docx_to_pptx' %}">DOC to PPTX</a>
+                    <a href="#">DOC to Excel</a>
+                </div>
+            </div>
+        </div>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <a href="/get-started" class="cta">Get Started</a>
+</header>
+
+<div class="container">
+ <h1>Conversion Successful!</h1>
+    <p>Your DOCX file has been successfully converted to a PPTX file.</p>
+     <div class="download-link">
+    <a href="{{ download_url }}">Download PPTX File</a>
+     </div>
+    </div>
+</body>
+
+</html>
